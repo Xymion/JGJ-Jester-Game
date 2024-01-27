@@ -7,8 +7,9 @@ public class UIMenu : MonoBehaviour
 {
     public GameObject storyScreen;
     public GameObject OptionsMenu;
+    public GameObject pauseScreen;
 
-   public void PlayGame()
+    public void PlayGame()
     {
         SceneManager.LoadScene("Nilla");
     }
@@ -37,6 +38,11 @@ public class UIMenu : MonoBehaviour
     public void playStory()
     {
         storyScreen.SetActive(true);
+    }
+    public void Resume()
+    {
+        pauseScreen.SetActive(false);
+        Time.timeScale = 1;
     }
 
 }
