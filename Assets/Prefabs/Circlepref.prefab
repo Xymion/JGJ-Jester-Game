@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,4 +97,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012c9a072ce3c364295c6316065ed10a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circle: {fileID: 0}
+  circlepref: {fileID: 0}
+  comingmoves: []
+  ScoreTextMeshPro: {fileID: 0}
+  scorevalue: 0
+  horizontalInput: 0
+  verticalInput: 0
+  arrLeftTextMeshPro: {fileID: 0}
+  arrRightTextMeshPro: {fileID: 0}
+  arrUpTextMeshPro: {fileID: 0}
+  arrDownTextMeshPro: {fileID: 0}
+  missTextMeshPro: {fileID: 0}
+  perfectTextMeshPro: {fileID: 0}
+  almostTextMeshPro: {fileID: 0}
+  misscount: 0
+  perfectcount: 0
+  almostcount: 0
+  delayconstant: 0.5

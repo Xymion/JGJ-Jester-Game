@@ -30,7 +30,7 @@ public class arrows : MonoBehaviour
     public int perfectcount = 0;
     public int almostcount = 0;
     float delayforarr = 0;
-    public float delayconstant = 0.5f;
+    public float delayconstant = 2f;
 
 
     void Start()
@@ -42,14 +42,14 @@ public class arrows : MonoBehaviour
     void Update()
     {
         //delayconstant = Math.Max(0.3f, delayconstant - 0.00001f);
-        delayforarr = Math.Max(0, delayforarr - Time.deltaTime);
-        arrUpTextMeshPro.fontSize = 36;
-        arrDownTextMeshPro.fontSize = 36;
-        arrLeftTextMeshPro.fontSize = 36;
-        arrRightTextMeshPro.fontSize = 36;
+       delayforarr = Math.Max(0, delayforarr - Time.deltaTime);
+       // arrUpTextMeshPro.fontSize = 36;
+       // arrDownTextMeshPro.fontSize = 36;
+       // arrLeftTextMeshPro.fontSize = 36;
+       // arrRightTextMeshPro.fontSize = 36;
         //scorevalue++;
-        ScoreTextMeshPro.text = "Score : " + scorevalue.ToString();
-        if (delayforarr == 0)
+       // ScoreTextMeshPro.text = "Score : " + scorevalue.ToString();
+        if (comingmoves.Count < 10 && delayforarr == 0)
         {
             delayforarr = delayconstant;
             comingmoves.Add(Instantiate(circlepref, new Vector3(arrowspositions[rand.Next(0,4)], -6, 0), Quaternion.identity));
@@ -62,7 +62,7 @@ public class arrows : MonoBehaviour
             if (pos.y > arrowmaxpos)
             {
                 misscount++;
-                missTextMeshPro.text = "Misses : " + misscount.ToString();
+                //missTextMeshPro.text = "Misses : " + misscount.ToString();
                 comingmoves.Remove(el);
                 Destroy(el);
                 //scorevalue -= 50;
@@ -82,7 +82,7 @@ public class arrows : MonoBehaviour
     {
         if (verticalInput > 0)
         {
-            arrUpTextMeshPro.fontSize = 50;
+            //arrUpTextMeshPro.fontSize = 50;
             var arr = comingmoves[0];
             if (comingmoves[0].transform.position.x == 7)
             {
@@ -92,7 +92,7 @@ public class arrows : MonoBehaviour
                     comingmoves.Remove(arr);
                     Destroy(arr);
                     perfectcount++;
-                    perfectTextMeshPro.text = "Perfect : " + perfectcount.ToString();
+                    //perfectTextMeshPro.text = "Perfect : " + perfectcount.ToString();
                 }
                 else if (arrowmaxpos - arr.transform.position.y < 1) //bad timing but still close
                 {
@@ -100,13 +100,13 @@ public class arrows : MonoBehaviour
                     comingmoves.Remove(arr);
                     Destroy(arr);
                     almostcount++;
-                    almostTextMeshPro.text = "Almost : " + almostcount.ToString();
+                    //almostTextMeshPro.text = "Almost : " + almostcount.ToString();
                 }
             }
         }
         if (verticalInput < 0)
         {
-            arrDownTextMeshPro.fontSize = 50;
+            //arrDownTextMeshPro.fontSize = 50;
             var arr = comingmoves[0];
             if (comingmoves[0].transform.position.x == 5.5f)
             {
@@ -116,7 +116,7 @@ public class arrows : MonoBehaviour
                     comingmoves.Remove(arr);
                     Destroy(arr);
                     perfectcount++;
-                    perfectTextMeshPro.text = "Perfect : " + perfectcount.ToString();
+                    //perfectTextMeshPro.text = "Perfect : " + perfectcount.ToString();
                 }
                 else if (arrowmaxpos - arr.transform.position.y < 0.6) //bad timing but still close
                 {
@@ -124,13 +124,13 @@ public class arrows : MonoBehaviour
                     comingmoves.Remove(arr);
                     Destroy(arr);
                     almostcount++;
-                    almostTextMeshPro.text = "Almost : " + almostcount.ToString();
+                    //almostTextMeshPro.text = "Almost : " + almostcount.ToString();
                 }
             }
         }
         if (horizontalInput > 0)
         {
-            arrRightTextMeshPro.fontSize = 50;
+            //arrRightTextMeshPro.fontSize = 50;
             var arr = comingmoves[0];
             if (comingmoves[0].transform.position.x == 8.5f)
             {
@@ -140,7 +140,7 @@ public class arrows : MonoBehaviour
                     comingmoves.Remove(arr);
                     Destroy(arr);
                     perfectcount++;
-                    perfectTextMeshPro.text = "Perfect : " + perfectcount.ToString();
+                    //perfectTextMeshPro.text = "Perfect : " + perfectcount.ToString();
                 }
                 else if (arrowmaxpos - arr.transform.position.y < 0.6) //bad timing but still close
                 {
@@ -148,13 +148,13 @@ public class arrows : MonoBehaviour
                     comingmoves.Remove(arr);
                     Destroy(arr);
                     almostcount++;
-                    almostTextMeshPro.text = "Almost : " + almostcount.ToString();
+                    //almostTextMeshPro.text = "Almost : " + almostcount.ToString();
                 }
             }
         }
         if (horizontalInput < 0)
         {
-            arrLeftTextMeshPro.fontSize = 50;
+            //arrLeftTextMeshPro.fontSize = 50;
             var arr = comingmoves[0];
             if (comingmoves[0].transform.position.x == 4)
             {
@@ -164,7 +164,7 @@ public class arrows : MonoBehaviour
                     comingmoves.Remove(arr);
                     Destroy(arr);
                     perfectcount++;
-                    perfectTextMeshPro.text = "Perfect : " + perfectcount.ToString();
+                    //perfectTextMeshPro.text = "Perfect : " + perfectcount.ToString();
                 }
                 else if (arrowmaxpos - arr.transform.position.y < 0.6) //bad timing but still close
                 {
@@ -172,7 +172,7 @@ public class arrows : MonoBehaviour
                     comingmoves.Remove(arr);
                     Destroy(arr);
                     almostcount++;
-                    almostTextMeshPro.text = "Almost : " + almostcount.ToString();
+                    //almostTextMeshPro.text = "Almost : " + almostcount.ToString();
                 }
             }
         }
