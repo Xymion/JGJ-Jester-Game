@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 012c9a072ce3c364295c6316065ed10a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - circlepref: {fileID: 626444669596275788, guid: 13ccd6029d6d9c64a901fe6e427fa88e, type: 3}
+  - ScoreTextMeshPro: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
