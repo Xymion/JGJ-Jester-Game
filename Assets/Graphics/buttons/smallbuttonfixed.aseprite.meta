@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f7d0720441369fc458e052ac98cb6d23
+guid: 8cea92a5a90afa443b63c4829aa0878a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,9 +121,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: fixedbigbutton
+  - name: smallbuttonfixed
     originalName: 
-    pivot: {x: 0.5, y: -0.033333335}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -131,8 +131,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 32
-      height: 30
-    spriteID: 903fc4afd6adb3b4b932ae23b2af3c55
+      height: 29
+    spriteID: 40b91e245f6dceb4da6b995ad8641781
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,20 +144,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 953353606
-    name: fixedbigbutton
+    guid: 2119258975
+    name: smallbuttonfixed
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: fixedbigbutton
+    - name: smallbuttonfixed
       frameIndex: 0
       cellRect:
         x: 0
-        y: 1
+        y: 0
         width: 32
-        height: 30
-      spriteId: 903fc4afd6adb3b4b932ae23b2af3c55
+        height: 29
+      spriteId: 40b91e245f6dceb4da6b995ad8641781
     linkedCells: []
     parentIndex: -1
   platformSettings: []
