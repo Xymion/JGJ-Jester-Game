@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public float MoveSpeed = 5f;
     public Transform movePoint;
 
-    public float cooldownTime = 0.3f;
+    public float cooldownTime = 0.05f;
     private bool isCooldown = false;
 
     public LayerMask stopMovement;

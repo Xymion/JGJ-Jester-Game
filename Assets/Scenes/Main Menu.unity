@@ -289,8 +289,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 27.26001, y: 0}
-  m_SizeDelta: {x: -895.02, y: -0.000061035}
+  m_AnchoredPosition: {x: 16.718018, y: 20.830994}
+  m_SizeDelta: {x: -939.44, y: -121.662}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &66732933
 MonoBehaviour:
@@ -983,7 +983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storyScreen: {fileID: 0}
-  OptionsMenu: {fileID: 0}
+  OptionsMenu: {fileID: 1210245392}
   pauseScreen: {fileID: 0}
 --- !u!114 &1210245394
 MonoBehaviour:
@@ -1325,7 +1325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storyScreen: {fileID: 0}
-  OptionsMenu: {fileID: 0}
+  OptionsMenu: {fileID: 1210245392}
   pauseScreen: {fileID: 0}
 --- !u!1 &1720800576
 GameObject:
