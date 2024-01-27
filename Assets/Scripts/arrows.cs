@@ -18,7 +18,7 @@ public class arrows : MonoBehaviour
     public int scorevalue = 0;
     public float horizontalInput;
     public float verticalInput;
-    private float arrowmaxpos = 2.5f;
+    private float arrowmaxpos = 2.6f;
     public TextMeshProUGUI arrLeftTextMeshPro;
     public TextMeshProUGUI arrRightTextMeshPro;
     public TextMeshProUGUI arrUpTextMeshPro;
@@ -58,6 +58,7 @@ public class arrows : MonoBehaviour
         foreach (var el in comingmoves)
         {
             var pos = el.transform.position;
+            el.transform.position = new Vector3(pos.x, (float)(pos.y + 0.01), pos.z);
             if (pos.y > arrowmaxpos)
             {
                 misscount++;
@@ -65,10 +66,6 @@ public class arrows : MonoBehaviour
                 comingmoves.Remove(el);
                 Destroy(el);
                 //scorevalue -= 50;
-            }
-            else
-            {
-                el.transform.position = new Vector3(pos.x, (float)(pos.y + 0.01), pos.z);
             }
         }
 
