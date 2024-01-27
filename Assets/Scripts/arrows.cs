@@ -31,6 +31,13 @@ public class arrows : MonoBehaviour
     public int almostcount = 0;
     float delayforarr = 0;
     public float delayconstant = 0.5f;
+    public TextMeshProUGUI kingBubbleTextMeshProUGUI;
+    public TextMeshProUGUI jesterbubbleTextMeshProUGUI;
+    private float delaybubbleconstant = 10f;
+    private float delaybubble = 5;
+    private string[] words = { "imdumb", "loveking", "moveforking" };
+    private string currentword = "";
+    private string lastinputs = "";
 
 
     void Start()
@@ -43,16 +50,54 @@ public class arrows : MonoBehaviour
     {
         //delayconstant = Math.Max(0.3f, delayconstant - 0.00001f);
         delayforarr = Math.Max(0, delayforarr - Time.deltaTime);
+        delaybubble = Math.Max(0, delaybubble - Time.deltaTime);
         arrUpTextMeshPro.fontSize = 36;
         arrDownTextMeshPro.fontSize = 36;
         arrLeftTextMeshPro.fontSize = 36;
         arrRightTextMeshPro.fontSize = 36;
+        lastinputs += Input.inputString;
+        jesterbubbleTextMeshProUGUI.text = lastinputs;
+        bool typingright = !(lastinputs.Length < currentword.Length);
+        bool mistake = false;
+        for (int i = 0; i < currentword.Length && i < lastinputs.Length; i++)
+        {
+            if (lastinputs[i] != currentword[i])
+            {
+                typingright = false;
+                mistake = true;
+            }
+        }
+
+        if (typingright)
+        {
+            kingBubbleTextMeshProUGUI.text = "Good job jester!";
+        }
+
+        if (mistake)
+        {
+            kingBubbleTextMeshProUGUI.text = "You're disappointing";
+        }
+        
         //scorevalue++;
         ScoreTextMeshPro.text = "Score : " + scorevalue.ToString();
         if (delayforarr == 0)
         {
             delayforarr = delayconstant;
             comingmoves.Add(Instantiate(circlepref, new Vector3(arrowspositions[rand.Next(0,4)], -6, 0), Quaternion.identity));
+        }
+
+        if (delaybubble == 0)
+        {
+            lastinputs = String.Empty;
+            delaybubble = delaybubbleconstant;
+            string tmp = words[rand.Next(0, words.Length)];
+            while (tmp == currentword)
+            {
+                tmp = words[rand.Next(0, words.Length)];
+            }
+
+            currentword = tmp;
+            kingBubbleTextMeshProUGUI.text = "SAY : " + currentword + " !";
         }
         
         foreach (var el in comingmoves)
