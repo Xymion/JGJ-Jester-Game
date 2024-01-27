@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class UIMenu : MonoBehaviour
 {
+    public GameObject storyScreen;
+    public GameObject OptionsMenu;
+
    public void PlayGame()
     {
         SceneManager.LoadScene("Nilla");
@@ -14,6 +17,26 @@ public class UIMenu : MonoBehaviour
     {
         Debug.Log("Quit");
         Application.Quit();
+    }
+
+    public void OpenOptions()
+    {
+        OptionsMenu.SetActive(true);
+    }
+
+    public void CloseOptions()
+    {
+        OptionsMenu.SetActive(false);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    public void playStory()
+    {
+        storyScreen.SetActive(true);
     }
 
 }
