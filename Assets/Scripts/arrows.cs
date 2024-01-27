@@ -90,10 +90,10 @@ public class arrows : MonoBehaviour
         {
             lastinputs = String.Empty;
             delaybubble = delaybubbleconstant;
-            string tmp = words[rand.Next(0, words.Length)];
+            string tmp = words[rand.Next(0, words.Length + 1)];
             while (tmp == currentword)
             {
-                tmp = words[rand.Next(0, words.Length)];
+                tmp = words[rand.Next(0, words.Length + 1)];
             }
 
             currentword = tmp;
