@@ -303,6 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseScreen: {fileID: 1708073726}
+  gameOverScreen: {fileID: 0}
 --- !u!4 &241735576
 Transform:
   m_ObjectHideFlags: 0
@@ -2953,6 +2954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 5
   movePoint: {fileID: 1282728644}
+  cooldownTime: 0.05
   stopMovement:
     serializedVersion: 2
     m_Bits: 8
