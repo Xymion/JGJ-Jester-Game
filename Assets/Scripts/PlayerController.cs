@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public float MoveSpeed = 5f;
     public Transform movePoint;
 
+    public LayerMask stopMovement;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,19 +25,35 @@ public class PlayerController : MonoBehaviour
         {
         if (Input.GetKey(KeyCode.D))
             {
-                movePoint.position += new Vector3(1f, 0f, 0f);
+                if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(1f, 0f, 0f), .2f, stopMovement))
+                {
+                    movePoint.position += new Vector3(1f, 0f, 0f);
+                }
+                
             }
         else if (Input.GetKey(KeyCode.A))
             {
-                movePoint.position += new Vector3(-1f, 0f, 0f);
+                if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(-1f, 0f, 0f), .2f, stopMovement))
+                {
+                    movePoint.position += new Vector3(-1f, 0f, 0f);
+                }
+                
             }
         if (Input.GetKey(KeyCode.W))
             {
-                movePoint.position += new Vector3(0f, 1f, 0f);
+                if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, 1f, 0f), .2f, stopMovement))
+                {
+                    movePoint.position += new Vector3(0f, 1f, 0f);
+                }
+                
             }
         else if (Input.GetKey(KeyCode.S))
             {
-                movePoint.position += new Vector3(0f, -1f, 0f);
+                if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, -1f, 0f), .2f, stopMovement))
+                {
+                    movePoint.position += new Vector3(0f, -1f, 0f);
+                }
+                
             }
 
 
