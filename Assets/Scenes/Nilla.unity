@@ -2954,7 +2954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 5
   movePoint: {fileID: 1282728644}
-  cooldownTime: 0.05
+  cooldownTime: 0.5
   stopMovement:
     serializedVersion: 2
     m_Bits: 8
