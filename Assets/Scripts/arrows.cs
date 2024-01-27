@@ -52,7 +52,7 @@ public class arrows : MonoBehaviour
         if (delayforarr == 0)
         {
             delayforarr = delayconstant;
-            comingmoves.Add(Instantiate(circlepref, new Vector3(arrowspositions[rand.Next(0,3)], -6, 0), Quaternion.identity));
+            comingmoves.Add(Instantiate(circlepref, new Vector3(arrowspositions[rand.Next(0,4)], -6, 0), Quaternion.identity));
         }
         
         foreach (var el in comingmoves)
