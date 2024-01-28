@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: 8017228183843406614, guid: b115e1d8daa9f1547bf1f9bba85b788a, type: 3}
+  m_Sprite: {fileID: -9196664183792280784, guid: 20da62862c264fd4983f31b056c40da4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBePressed: 0
-  moveSpeed: 5
+  moveSpeed: 3
   keyToPress: 275
 --- !u!58 &6403835061355446108
 CircleCollider2D:

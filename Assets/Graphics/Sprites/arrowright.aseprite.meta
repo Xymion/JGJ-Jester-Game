@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: arrowright
     originalName: 
-    pivot: {x: 0.53846157, y: -1.0909091}
+    pivot: {x: 0.5284185, y: 0.4916238}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:

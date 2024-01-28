@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBePressed: 0
-  moveSpeed: 5
+  moveSpeed: 3
   keyToPress: 273
 --- !u!58 &6478396127537081253
 CircleCollider2D:

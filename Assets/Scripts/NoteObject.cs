@@ -6,7 +6,7 @@ public class NoteObject : MonoBehaviour
 {
 
     public bool canBePressed;
-    public float moveSpeed = 5f;
+    public float moveSpeed = 3f;
 
     public KeyCode keyToPress;
     // Start is called before the first frame update
