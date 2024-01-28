@@ -1796,6 +1796,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4791416511202323750, guid: 7948296f23580724eac83c8d9786b752, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791416511202323750, guid: 7948296f23580724eac83c8d9786b752, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791416511202323750, guid: 7948296f23580724eac83c8d9786b752, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791416511202323750, guid: 7948296f23580724eac83c8d9786b752, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 5326232530369875299, guid: 7948296f23580724eac83c8d9786b752, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2385,11 +2401,11 @@ PrefabInstance:
       objectReference: {fileID: 1787432145}
     - target: {fileID: 8718167089784257268, guid: 821d42d10b6e1ea4f801768c5d8174f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.48
+      value: -3.47
       objectReference: {fileID: 0}
     - target: {fileID: 8718167089784257268, guid: 821d42d10b6e1ea4f801768c5d8174f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.51
+      value: -2.61
       objectReference: {fileID: 0}
     - target: {fileID: 8718167089784257268, guid: 821d42d10b6e1ea4f801768c5d8174f0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2436,6 +2452,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1166877467544110152, guid: 8d3a7209bbb6ea74387892dbc55a4213, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1471445067241045814, guid: 8d3a7209bbb6ea74387892dbc55a4213, type: 3}
       propertyPath: m_Name
       value: GameOver
@@ -2678,6 +2698,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1440907712}
+    - target: {fileID: 7349827839409238821, guid: db7dc7e3edb4c8e46933e628f602c06c, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8337651668501625141, guid: db7dc7e3edb4c8e46933e628f602c06c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
