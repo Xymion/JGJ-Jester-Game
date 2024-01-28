@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     public float MoveSpeed = 5f;
     public Transform movePoint;
 
+    public GameObject GameOverScreen;
+    public GameObject pauseButtonScreen;
+
     public float cooldownTime = 0.05f;
     private bool isCooldown = false;
 
@@ -64,6 +67,21 @@ public class PlayerController : MonoBehaviour
             }
 
 
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // Check if the colliding object is a tomato
+        if (other.CompareTag("Tomato"))
+        {
+            // Handle collision with the tomato
+            GameOverScreen.SetActive(true);
+            pauseButtonScreen.SetActive(false);
+            Time.timeScale = 0;
+            Debug.Log("HIT");
+
+            // You can add more logic here, such as reducing player health or scoring points.
         }
     }
 

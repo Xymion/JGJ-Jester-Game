@@ -5,7 +5,8 @@ public class TomatoInitiator : MonoBehaviour
 {
   
     public GameObject tomatoPrefab;
-    public float tomatoSpeed = 5f;
+    public float tomatoSpeed = 3f;
+   
 
     // Method to spawn a single tomato
     public void SpawnSingleTomato()
@@ -72,5 +73,7 @@ public class TomatoInitiator : MonoBehaviour
 
         return new Vector3(spawnX, spawnY, 0f);
     }
+
+    
 
 }
