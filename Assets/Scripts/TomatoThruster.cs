@@ -2,17 +2,29 @@ using UnityEngine;
 
 public class TomatoThruster : MonoBehaviour
 {
-    public float speed = 5f;
+    public float lifetime = 10f;
 
     void Start()
     {
-        // Set initial movement direction
-        Vector2 randomDirection = Random.insideUnitCircle.normalized;
-        GetComponent<Rigidbody2D>().velocity = randomDirection * speed;
+        InvokeRepeating("CheckAndDestroy", lifetime, 0.1f);
     }
 
-    void Update()
+    void CheckAndDestroy()
     {
-        // Optionally handle additional behaviors or destruction conditions
+        if (gameObject != null)
+        {
+            // Perform additional checks if needed
+            // ...
+
+            // Destroy the tomato
+            Destroy(gameObject);
+        }
+    }
+
+    void OnDestroy()
+    {
+        // Stop the repeating check when the object is being destroyed
+        CancelInvoke("CheckAndDestroy");
     }
 }
+

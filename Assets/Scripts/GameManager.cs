@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverScreen;
     public int currentScore;
     public int scorePerNote = 100;
+    [SerializeField]
+    private TomatoInitiator tomatoSpawner;
 
     public TextMeshProUGUI scoreText;
 
@@ -49,7 +51,15 @@ public class GameManager : MonoBehaviour
 
     public void NoteMiss()
     {
+        if (tomatoSpawner != null)
+        {
+            tomatoSpawner.SpawnSingleTomato();
+           
+        }
         Debug.Log("MISS");
+
     }
-    
+   
+
+
 }

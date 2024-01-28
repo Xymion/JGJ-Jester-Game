@@ -44,7 +44,7 @@ public class NoteObject : MonoBehaviour
         {
             canBePressed = false;
             GameManager.instance.NoteMiss();
-            Destroy(gameObject, 5);
+            Destroy(gameObject, 1f);
         }
     }
 }
