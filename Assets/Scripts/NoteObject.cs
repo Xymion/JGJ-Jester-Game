@@ -6,6 +6,7 @@ public class NoteObject : MonoBehaviour
 {
 
     public bool canBePressed;
+    public float moveSpeed = 5f;
 
     public KeyCode keyToPress;
     // Start is called before the first frame update
@@ -15,13 +16,16 @@ public class NoteObject : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() 
+    { 
+        // Move the object downwards
+        transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
+    
         if (Input.GetKeyDown(keyToPress))
         {
             if(canBePressed)
             {
-                gameObject.SetActive(false);
+                Destroy(gameObject);
                 GameManager.instance.NoteHit();
             }
         }
@@ -40,6 +44,7 @@ public class NoteObject : MonoBehaviour
         {
             canBePressed = false;
             GameManager.instance.NoteMiss();
+            Destroy(gameObject, 5);
         }
     }
 }

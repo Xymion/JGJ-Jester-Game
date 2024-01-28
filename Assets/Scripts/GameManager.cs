@@ -14,8 +14,6 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI scoreText;
 
-    public NoteScroller NS;
-
     public static GameManager instance;
 
     // Start is called before the first frame update

@@ -6,7 +6,7 @@ public class NoteScroller : MonoBehaviour
 {
 
     public float noteTempo;
-    public bool hasStarted;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -17,16 +17,8 @@ public class NoteScroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!hasStarted)
-        {
-            if (Input.anyKeyDown)
-            {
-                hasStarted= true;
-            }
-        }
-        else
-        {
-            transform.position -= new Vector3(0f, noteTempo * Time.deltaTime, 0f);
-        }
+        
+    transform.position -= new Vector3(0f, noteTempo * Time.deltaTime, 0f);
+        
     }
 }
